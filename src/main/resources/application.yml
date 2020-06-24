@@ -1,0 +1,21 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/user_center
+    hikari:
+      username: root
+      password: 123456789
+      driver-class-name: com.mysql.cj.jdbc.Driver
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+        metadata:
+          version : v1
+#        namespace:  5aee0e1b-51f7-414b-908b-c773f389b047
+#        cluster-name: BEIJING
+  application:
+    name: user-center
+mybatis:
+  mapper-locations : classpath:/mapper/**Mapper.xml
+server:
+  port: 8080
