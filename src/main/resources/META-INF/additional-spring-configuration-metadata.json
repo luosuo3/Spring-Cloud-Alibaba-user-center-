@@ -1,0 +1,7 @@
+{
+  "properties": [
+    {
+      "type": "java.lang.String",
+      "description": "Description for rockermq."
+  }
+] }
