@@ -2,6 +2,8 @@ package com.itmuch.usercenter.model;
 
 import java.io.Serializable;
 import java.util.Date;
+
+import lombok.Builder;
 import lombok.Data;
 
 /**
@@ -9,6 +11,7 @@ import lombok.Data;
  * @author 
  */
 @Data
+@Builder
 public class BonusEventLog implements Serializable {
     /**
      * Id
