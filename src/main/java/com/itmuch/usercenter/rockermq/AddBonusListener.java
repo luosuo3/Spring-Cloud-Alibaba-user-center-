@@ -19,8 +19,8 @@ import java.util.Date;
  */
 @Service
 @Slf4j
-@RocketMQMessageListener(consumerGroup = "consumerGroup", topic = "add-bonus")
-public class addBonusListener implements RocketMQListener<UserAddBonusMsgDTO> {
+//@RocketMQMessageListener(consumerGroup = "consumerGroup", topic = "add-bonus")
+public class AddBonusListener implements RocketMQListener<UserAddBonusMsgDTO> {
     @Resource
     private UserMapper userMapper;
     @Resource

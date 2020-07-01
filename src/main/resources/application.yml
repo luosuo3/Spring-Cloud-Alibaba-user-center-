@@ -12,6 +12,15 @@ spring:
         metadata:
           version : v1
         cluster-name: BEIJING
+    stream:
+      rocketmq:
+        binder:
+          name-server: 127.0.0.1:9876
+      bindings:
+        input:
+          destination: add-bonus
+#           rocketmq 必须设置
+          group: binder-group
 #        namespace:  5aee0e1b-51f7-414b-908b-c773f389b047
 #      cluster-name: BEIJING
   application:
@@ -20,5 +29,5 @@ mybatis:
   mapper-locations : classpath:/mapper/**Mapper.xml
 server:
   port: 8082
-rocketmq:
-  name-server: 127.0.1:9876
+#rocketmq:
+#  name-server: 127.0.1:9876
