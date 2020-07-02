@@ -13,10 +13,10 @@ import org.springframework.stereotype.Service;
 @Slf4j
 @Service
 public class MyTestStreamConsumer {
-//    全局异常处理
+    //    全局异常处理
     @StreamListener("errorChannel")
-    public void error (Message<?> message) {
+    public void error(Message<?> message) {
         ErrorMessage errorMessage = (ErrorMessage) message;
-        log.warn("消息发生异常,errorMessage={}",errorMessage);
+        log.warn("消息发生异常,errorMessage={}", errorMessage);
     }
 }

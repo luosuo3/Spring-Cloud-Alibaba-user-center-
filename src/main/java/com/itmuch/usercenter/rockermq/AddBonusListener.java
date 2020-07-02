@@ -33,7 +33,7 @@ public class AddBonusListener implements RocketMQListener<UserAddBonusMsgDTO> {
         Integer bonus = message.getBonus();
         Integer userId = message.getUserId();
         User user = userMapper.selectByPrimaryKey(userId);
-        user.setBonus(user.getBonus()+bonus);
+        user.setBonus(user.getBonus() + bonus);
         userMapper.updateByPrimaryKey(user);
         bonusEventLogMapper.insert(BonusEventLog.builder()
                 .userId(userId)

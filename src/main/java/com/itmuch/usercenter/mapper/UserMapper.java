@@ -2,10 +2,12 @@ package com.itmuch.usercenter.mapper;
 
 import com.itmuch.usercenter.model.User;
 import com.itmuch.usercenter.model.UserExample;
+
 import java.util.List;
 
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
+
 @Mapper
 public interface UserMapper {
     long countByExample(UserExample example);

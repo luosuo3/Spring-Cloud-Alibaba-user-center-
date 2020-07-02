@@ -10,7 +10,7 @@ spring:
       discovery:
         server-addr: localhost:8848
         metadata:
-          version : v1
+          version: v1
         cluster-name: BEIJING
     stream:
       rocketmq:
@@ -19,15 +19,17 @@ spring:
       bindings:
         input:
           destination: add-bonus
-#           rocketmq 必须设置
+          #           rocketmq 必须设置
           group: binder-group
-#        namespace:  5aee0e1b-51f7-414b-908b-c773f389b047
-#      cluster-name: BEIJING
+  #        namespace:  5aee0e1b-51f7-414b-908b-c773f389b047
+  #      cluster-name: BEIJING
   application:
     name: user-center
+
 mybatis:
-  mapper-locations : classpath:/mapper/**Mapper.xml
+  mapper-locations: classpath:/mapper/**Mapper.xml
 server:
-  port: 8082
+  port: 8081
 #rocketmq:
 #  name-server: 127.0.1:9876
+

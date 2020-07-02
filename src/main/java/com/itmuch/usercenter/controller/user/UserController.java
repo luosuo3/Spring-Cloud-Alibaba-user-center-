@@ -20,6 +20,7 @@ import javax.annotation.Resource;
 public class UserController {
     @Resource
     private UserService userService;
+
     @GetMapping("/{id}")
     public User findById(@PathVariable int id) {
         log.info("我被请求了");

@@ -487,6 +487,7 @@ public class BonusEventLogExample {
     }
 
     /**
+     *
      */
     public static class Criteria extends GeneratedCriteria {
         protected Criteria() {

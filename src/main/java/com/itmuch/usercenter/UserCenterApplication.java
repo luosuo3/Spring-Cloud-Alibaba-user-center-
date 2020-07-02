@@ -9,7 +9,7 @@ import org.springframework.cloud.stream.messaging.Sink;
 @MapperScan("com.itmuch.usercenter.mapper")
 @SpringBootApplication
 @EnableBinding({Sink.class})
-public class UserCenterApplication  {
+public class UserCenterApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(UserCenterApplication.class, args);

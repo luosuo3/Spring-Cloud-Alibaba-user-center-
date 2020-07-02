@@ -8,7 +8,8 @@ import lombok.Data;
 
 /**
  * bonus_event_log
- * @author 
+ *
+ * @author
  */
 @Data
 @Builder

@@ -23,10 +23,12 @@ public class UserService {
     private UserMapper userMapper;
     @Resource
     private BonusEventLogMapper bonusEventLogMapper;
-    public  User findById( int id) {
+
+    public User findById(int id) {
         User user = userMapper.selectByPrimaryKey(id);
         return user;
     }
+
     @Transactional(rollbackFor = Exception.class)
     public void addBonus(UserAddBonusMsgDTO message) {
 //        当收到消息的时候执行的业务

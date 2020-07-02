@@ -2,11 +2,13 @@ package com.itmuch.usercenter.model;
 
 import java.io.Serializable;
 import java.util.Date;
+
 import lombok.Data;
 
 /**
  * user
- * @author 
+ *
+ * @author
  */
 @Data
 public class User implements Serializable {
