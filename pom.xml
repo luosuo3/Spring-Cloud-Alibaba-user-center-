@@ -55,16 +55,34 @@
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-alibaba-nacos-discovery</artifactId>
             <version>2.1.0.RELEASE</version>
+            <exclusions>
+                <exclusion>
+                    <artifactId>jsr305</artifactId>
+                    <groupId>com.google.code.findbugs</groupId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <dependency>
             <groupId>org.apache.rocketmq</groupId>
             <artifactId>rocketmq-spring-boot-starter</artifactId>
             <version>2.0.3</version>
+            <exclusions>
+                <exclusion>
+                    <artifactId>fastjson</artifactId>
+                    <groupId>com.alibaba</groupId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-stream-rocketmq</artifactId>
             <version>0.9.0.RELEASE</version>
+            <exclusions>
+                <exclusion>
+                    <artifactId>rocketmq-spring-boot-starter</artifactId>
+                    <groupId>org.apache.rocketmq</groupId>
+                </exclusion>
+            </exclusions>
         </dependency>
 
         <dependency>
@@ -83,6 +101,15 @@
             <artifactId>jjwt-jackson</artifactId>
             <version>0.10.7</version>
             <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.github.binarywang</groupId>
+            <artifactId>weixin-java-miniapp</artifactId>
+            <version>3.5.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-aop</artifactId>
         </dependency>
 
     </dependencies>

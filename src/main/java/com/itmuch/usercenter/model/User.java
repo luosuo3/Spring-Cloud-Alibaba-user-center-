@@ -3,7 +3,10 @@ package com.itmuch.usercenter.model;
 import java.io.Serializable;
 import java.util.Date;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 /**
  * user
@@ -11,6 +14,9 @@ import lombok.Data;
  * @author
  */
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
 public class User implements Serializable {
     /**
      * Id

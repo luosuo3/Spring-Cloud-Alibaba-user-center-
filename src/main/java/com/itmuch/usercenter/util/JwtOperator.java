@@ -73,7 +73,7 @@ public class JwtOperator {
      *
      * @return 过期时间
      */
-    private Date getExpirationTime() {
+    public Date getExpirationTime() {
         return new Date(System.currentTimeMillis() + this.expirationTimeInSecond * 1000);
     }
 
@@ -114,7 +114,7 @@ public class JwtOperator {
     }
 
 
-    public static void main(String[] args) {
+  /*  public static void main(String[] args) {
         // 1. 初始化
         JwtOperator jwtOperator = new JwtOperator();
         jwtOperator.expirationTimeInSecond = 1209600L;
@@ -153,5 +153,5 @@ public class JwtOperator {
 
         // 测试6: 这是一个被篡改的token，因此会报异常，说明JWT是安全的
         jwtOperator.validateToken("eyJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJpYXQiOjE1NjU1ODk3MzIsImV4cCI6MTU2Njc5OTMzMn0.nDv25ex7XuTlmXgNzGX46LqMZItVFyNHQpmL9UQf-aUx");
-    }
+    }*/
 }

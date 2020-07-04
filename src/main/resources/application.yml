@@ -25,11 +25,13 @@ spring:
   #      cluster-name: BEIJING
   application:
     name: user-center
-
 mybatis:
   mapper-locations: classpath:/mapper/**Mapper.xml
 server:
   port: 8081
 #rocketmq:
 #  name-server: 127.0.1:9876
-
+jwt:
+  secret: fafasdfsdfasdfasdffadsfdasfasdfas
+  # 有效期，单位秒，默认2周
+  expire-time-in-second: 1209600
