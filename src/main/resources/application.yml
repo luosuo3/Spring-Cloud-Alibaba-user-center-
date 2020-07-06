@@ -5,6 +5,7 @@ spring:
       username: root
       password: 123456789
       driver-class-name: com.mysql.cj.jdbc.Driver
+
   cloud:
     nacos:
       discovery:
@@ -25,6 +26,14 @@ spring:
   #      cluster-name: BEIJING
   application:
     name: user-center
+  zipkin:
+    base-url: http://localhost:9411/
+    discovery-client-enabled: false
+  sleuth:
+    sampler:
+#      抽样率不丢失任何数据达到100%
+#      建议默认0.1不会影响性能
+      probability: 1.0
 mybatis:
   mapper-locations: classpath:/mapper/**Mapper.xml
 server:
@@ -35,3 +44,11 @@ jwt:
   secret: fafasdfsdfasdfasdffadsfdasfasdfas
   # 有效期，单位秒，默认2周
   expire-time-in-second: 1209600
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: always

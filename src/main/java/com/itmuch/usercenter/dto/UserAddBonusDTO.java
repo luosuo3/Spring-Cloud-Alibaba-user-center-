@@ -1,4 +1,4 @@
-package com.itmuch.usercenter.rockermq.dto;
+package com.itmuch.usercenter.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -7,15 +7,19 @@ import lombok.NoArgsConstructor;
 
 /**
  * @author 王峥
- * @date 2020/6/29 5:19 下午
+ * @date 2020/7/5 2:01 下午
  */
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class UserAddBonusMsgDTO {
+public class UserAddBonusDTO {
+    /**
+     * 用户ID
+     */
     private Integer userId;
+    /**
+     * 积分
+     */
     private Integer bonus;
-    private String description;
-    private String event;
 }

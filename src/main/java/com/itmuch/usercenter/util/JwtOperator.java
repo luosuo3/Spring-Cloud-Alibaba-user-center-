@@ -95,9 +95,6 @@ public class JwtOperator {
                 .setClaims(claims)
                 .setIssuedAt(createdTime)
                 .setExpiration(expirationTime)
-                // 你也可以改用你喜欢的算法
-                // 支持的算法详见：https://github.com/jwtk/jjwt#features
-                // RSA有公钥私钥的的概念安全性比较好
                 .signWith(key, SignatureAlgorithm.HS256)
                 .compact();
     }
